@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".`MainActivity.kt`"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="24dp">
+
+        <!-- Título -->
+        <TextView
+            android:id="@+id/textViewTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Checklist Simplificado"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Campo: Local -->
+        <TextView
+            android:id="@+id/textViewLabelLocal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Local:"
+            app:layout_constraintTop_toBottomOf="@id/textViewTitle"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="16dp"/>
+
+        <EditText
+            android:id="@+id/editTextLocal"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Nome da subestação"
+            app:layout_constraintTop_toBottomOf="@id/textViewLabelLocal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <!-- Campo: Nome do Técnico -->
+        <TextView
+            android:id="@+id/textViewLabelNomeTecnico"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nome do Técnico:"
+            app:layout_constraintTop_toBottomOf="@id/editTextLocal"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="16dp"/>
+
+        <EditText
+            android:id="@+id/editTextNomeTecnico"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Seu nome"
+            app:layout_constraintTop_toBottomOf="@id/textViewLabelNomeTecnico"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <!-- Situação da Estação -->
+        <TextView
+            android:id="@+id/textViewLabelSituacao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Situação da Estação:"
+            app:layout_constraintTop_toBottomOf="@id/editTextNomeTecnico"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="16dp"/>
+
+        <RadioGroup
+            android:id="@+id/radioGroupSituacao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@id/textViewLabelSituacao"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="4dp">
+
+            <RadioButton
+                android:id="@+id/radioButtonNormal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Normal"
+                android:checked="true"/>
+
+            <RadioButton
+                android:id="@+id/radioButtonCritica"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Crítica"
+                android:layout_marginStart="24dp"/>
+        </RadioGroup>
+
+        <!-- Ação Tomada -->
+        <TextView
+            android:id="@+id/textViewLabelAcaoTomada"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ação Tomada:"
+            android:visibility="gone"
+            app:layout_constraintTop_toBottomOf="@id/radioGroupSituacao"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="16dp"/>
+
+        <EditText
+            android:id="@+id/editTextAcaoTomada"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Descreva a ação"
+            android:visibility="gone"
+            app:layout_constraintTop_toBottomOf="@id/textViewLabelAcaoTomada"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <!-- Gravidade -->
+        <TextView
+            android:id="@+id/textViewLabelGravidade"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Gravidade:"
+            android:visibility="gone"
+            app:layout_constraintTop_toBottomOf="@id/editTextAcaoTomada"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="16dp"/>
+
+        <RadioGroup
+            android:id="@+id/radioGroupGravidade"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            app:layout_constraintTop_toBottomOf="@id/textViewLabelGravidade"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="4dp">
+
+            <RadioButton
+                android:id="@+id/radioButtonBaixa"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Baixa"
+                android:checked="true"/>
+
+            <RadioButton
+                android:id="@+id/radioButtonAlta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Alta"
+                android:layout_marginStart="24dp"/>
+        </RadioGroup>
+
+        <!-- Botão Salvar -->
+        <Button
+            android:id="@+id/buttonSalvar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Salvar Checklist"
+            android:textSize="18sp"
+            android:backgroundTint="?attr/colorPrimary"
+            android:textColor="@android:color/white"
+            app:layout_constraintTop_toBottomOf="@id/radioGroupGravidade"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="32dp"
+            android:layout_marginBottom="24dp"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
