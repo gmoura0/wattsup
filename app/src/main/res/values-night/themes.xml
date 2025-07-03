@@ -2,6 +2,32 @@
     <!-- Base application theme. -->
     <style name="Base.Theme.Techtribe" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your dark theme here. -->
-        <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
+        <item name="colorPrimary">@color/colorPrimary</item> <!-- Usando o mesmo laranja principal -->
+        <item name="colorPrimaryVariant">@color/colorPrimaryDark</item> <!-- Laranja mais escuro -->
+        <item name="colorOnPrimary">@color/colorOnPrimary</item> <!-- Branco sobre laranja -->
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/colorAccent</item> <!-- Amarelo dourado -->
+        <item name="colorSecondaryVariant">@color/colorAccent</item>
+        <item name="colorOnSecondary">@color/colorOnAccent</item> <!-- Preto sobre amarelo -->
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+        <!-- Para o tema noturno, um fundo mais escuro é apropriado -->
+        <item name="android:windowBackground">@color/black</item> <!-- Ou um cinza bem escuro como #121212 -->
+
+        <!-- Aplicando estilos específicos para componentes no tema noturno se necessário -->
+        <item name="buttonStyle">@style/Widget.App.Button.Night</item>
+        <item name="radioButtonStyle">@style/Widget.App.RadioButton.Night</item>
+    </style>
+
+    <!-- Estilos específicos para componentes no tema noturno -->
+    <style name="Widget.App.Button.Night" parent="Widget.Material3.Button">
+        <item name="android:textColor">@color/colorOnPrimary</item>
+        <item name="backgroundTint">?attr/colorPrimary</item>
+    </style>
+
+    <style name="Widget.App.RadioButton.Night" parent="Widget.Material3.CompoundButton.RadioButton">
+        <item name="buttonTint">?attr/colorAccent</item>
+        <item name="android:textColor">@color/white</item> <!-- Texto do RadioButton claro no tema escuro -->
     </style>
 </resources>

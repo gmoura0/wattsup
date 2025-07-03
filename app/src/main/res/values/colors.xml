@@ -2,4 +2,25 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <!-- Novas Cores da Aplicação (Laranja/Amarelo) -->
+    <color name="colorPrimary">#F57C00</color> <!-- Laranja Principal -->
+    <color name="colorPrimaryDark">#E65100</color> <!-- Laranja Escuro -->
+    <color name="colorAccent">#FFD700</color> <!-- Amarelo Dourado -->
+
+    <color name="colorOnPrimary">#FFFFFF</color> <!-- Texto/ícones sobre colorPrimary -->
+    <color name="colorOnAccent">#000000</color> <!-- Texto/ícones sobre colorAccent -->
+
+    <!-- Cores de Texto (Mantidas para legibilidade) -->
+    <color name="textColorPrimary">#212121</color> <!-- Cinza Bem Escuro -->
+    <color name="textColorSecondary">#757575</color> <!-- Cinza Médio -->
+
+    <!-- Cores para o Degradê e Fundo Base -->
+    <color name="lightYellowBackground">#FFF9C4</color> <!-- Amarelo bem clarinho (topo do degradê) -->
+    <color name="windowBackground">#FFFFFF</color> <!-- Branco (base/fim do degradê) -->
+    <color name="semiWhiteBackground">#FAFAFA</color> <!-- Branco levemente acinzentado (alternativa) -->
+
+    <!-- Cor de fundo para EditText -->
+    <color name="editTextBackgroundColor">#FFFAFA</color> <!-- Branco "Snow" -->
+
 </resources>

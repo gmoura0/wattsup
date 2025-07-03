@@ -5,24 +5,39 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".`MainActivity.kt`"
+    tools:context=".MainActivity"
     android:fillViewport="true">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="24dp">
+        android:padding="24dp"
+        android:background="@drawable/background_gradient">
 
         <!-- Título -->
         <TextView
             android:id="@+id/textViewTitle"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="Checklist Simplificado"
-            android:textSize="24sp"
+            android:text="WattsUp"
+            android:textSize="34sp"
             android:textStyle="bold"
             android:textAlignment="center"
             app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginBottom="8dp"/>
+
+        <!-- Nome da Empresa Cliente -->
+        <TextView
+            android:id="@+id/textViewCompanyName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Energral S.A."
+            android:textSize="26sp"
+            android:textAlignment="center"
+            android:textColor="?attr/colorPrimary"
+            app:layout_constraintTop_toBottomOf="@id/textViewTitle"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginBottom="16dp"/>
@@ -33,7 +48,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Local:"
-            app:layout_constraintTop_toBottomOf="@id/textViewTitle"
+            android:textSize="20sp"
+            app:layout_constraintTop_toBottomOf="@id/textViewCompanyName"
             app:layout_constraintStart_toStartOf="parent"
             android:layout_marginTop="16dp"/>
 
@@ -42,9 +58,16 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:hint="Nome da subestação"
+            android:textSize="20sp"
+            android:background="@drawable/edittext_rounded_corners_bg"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            android:paddingTop="14dp"
+            android:paddingBottom="14dp"
             app:layout_constraintTop_toBottomOf="@id/textViewLabelLocal"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"/>
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="4dp"/>
 
         <!-- Campo: Nome do Técnico -->
         <TextView
@@ -52,6 +75,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Nome do Técnico:"
+            android:textSize="20sp"
             app:layout_constraintTop_toBottomOf="@id/editTextLocal"
             app:layout_constraintStart_toStartOf="parent"
             android:layout_marginTop="16dp"/>
@@ -61,9 +85,16 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:hint="Seu nome"
+            android:textSize="20sp"
+            android:background="@drawable/edittext_rounded_corners_bg"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            android:paddingTop="14dp"
+            android:paddingBottom="14dp"
             app:layout_constraintTop_toBottomOf="@id/textViewLabelNomeTecnico"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"/>
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="4dp"/>
 
         <!-- Situação da Subestação -->
         <TextView
@@ -71,6 +102,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Situação da Subestação:"
+            android:textSize="20sp"
             app:layout_constraintTop_toBottomOf="@id/editTextNomeTecnico"
             app:layout_constraintStart_toStartOf="parent"
             android:layout_marginTop="16dp"/>
@@ -89,6 +121,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Normal"
+                android:textSize="18sp"
                 android:checked="true"/>
 
             <RadioButton
@@ -96,6 +129,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Crítica"
+                android:textSize="18sp"
                 android:layout_marginStart="24dp"/>
         </RadioGroup>
 
@@ -105,6 +139,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Ação Tomada:"
+            android:textSize="20sp"
             android:visibility="gone"
             app:layout_constraintTop_toBottomOf="@id/radioGroupSituacao"
             app:layout_constraintStart_toStartOf="parent"
@@ -115,10 +150,17 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:hint="Descreva a ação"
+            android:textSize="20sp"
+            android:background="@drawable/edittext_rounded_corners_bg"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            android:paddingTop="18dp"
+            android:paddingBottom="18dp"
             android:visibility="gone"
             app:layout_constraintTop_toBottomOf="@id/textViewLabelAcaoTomada"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"/>
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="4dp"/>
 
         <!-- Gravidade -->
         <TextView
@@ -126,6 +168,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Gravidade:"
+            android:textSize="20sp"
             android:visibility="gone"
             app:layout_constraintTop_toBottomOf="@id/editTextAcaoTomada"
             app:layout_constraintStart_toStartOf="parent"
@@ -146,6 +189,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Baixa"
+                android:textSize="18sp"
                 android:checked="true"/>
 
             <RadioButton
@@ -153,6 +197,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Alta"
+                android:textSize="18sp"
                 android:layout_marginStart="24dp"/>
         </RadioGroup>
 
@@ -162,7 +207,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:text="Salvar Checklist"
-            android:textSize="18sp"
+            android:textSize="22sp"
             android:backgroundTint="?attr/colorPrimary"
             android:textColor="@android:color/white"
             app:layout_constraintTop_toBottomOf="@id/radioGroupGravidade"
@@ -170,6 +215,22 @@
             app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginTop="32dp"
             android:layout_marginBottom="24dp"/>
+
+        <!-- Nome da Empresa Desenvolvedora -->
+        <TextView
+            android:id="@+id/textViewDeveloperName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Desenvolvido por TechTribe"
+            android:textSize="16sp"
+            android:textAlignment="center"
+            android:textColor="@color/textColorSecondary"
+            app:layout_constraintTop_toBottomOf="@id/buttonSalvar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="16dp"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

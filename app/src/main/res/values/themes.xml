@@ -2,8 +2,36 @@
     <!-- Base application theme. -->
     <style name="Base.Theme.Techtribe" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryVariant">@color/colorPrimaryDark</item>
+        <item name="colorOnPrimary">@color/colorOnPrimary</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/colorAccent</item>
+        <item name="colorSecondaryVariant">@color/colorAccent</item> <!-- Pode ser o mesmo ou uma variação mais escura/clara do accent -->
+        <item name="colorOnSecondary">@color/colorOnAccent</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+        <item name="android:windowBackground">@color/windowBackground</item>
     </style>
 
     <style name="Theme.Techtribe" parent="Base.Theme.Techtribe" />
+
+    <!-- Style for Buttons to ensure text color contrasts with background -->
+    <style name="Widget.App.Button" parent="Widget.Material3.Button">
+        <item name="android:textColor">@color/colorOnPrimary</item>
+        <item name="backgroundTint">?attr/colorPrimary</item>
+    </style>
+
+    <!-- Style for RadioButtons to use accent color -->
+    <style name="Widget.App.RadioButton" parent="Widget.Material3.CompoundButton.RadioButton">
+        <item name="buttonTint">?attr/colorAccent</item>
+    </style>
+
+    <!-- Style for EditText backgrounds if needed, though direct background drawable is often preferred -->
+    <style name="Widget.App.EditText" parent="Widget.Material3.TextInputEditText.OutlinedBox">
+        <!-- Exemplo: <item name="android:background">@drawable/edittext_rounded_corners_bg</item> -->
+        <!-- No entanto, para o seu caso, já aplicamos o background diretamente no XML do layout, o que é mais específico. -->
+        <!-- Manter aqui caso queira um estilo global para EditTexts no futuro. -->
+    </style>
 </resources>
